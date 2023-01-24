@@ -8,14 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmitrykurmanov/SF-TS-Final-Task.git"
+    "url": "git+https://github.com/Alekssoo/module20_homework.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/dmitrykurmanov/SF-TS-Final-Task/issues"
+    "url": "https://github.com/Alekssoo/module20_homework/issues"
   },
-  "homepage": "https://github.com/dmitrykurmanov/SF-TS-Final-Task#readme",
+  "homepage": "https://github.com/Alekssoo/module20_homework#readme",
   "devDependencies": {
     "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "typescript": "^4.9.4"
   }
 }
