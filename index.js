@@ -10,7 +10,6 @@ for (i = 0; i < myNodelist.length; i++) {
 }
 // Click on a close button to hide the current list item
 let closeButtons = document.getElementsByClassName("close");
-i;
 for (i = 0; i < closeButtons.length; i++) {
     let closeButton = closeButtons[i];
     closeButton.addEventListener("click", () => {

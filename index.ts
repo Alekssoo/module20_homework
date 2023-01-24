@@ -13,7 +13,6 @@ for (i = 0; i < myNodelist.length; i++) {
 
 // Click on a close button to hide the current list item
 let closeButtons: HTMLCollectionOf<Element> = document.getElementsByClassName("close");
-i;
 for (i = 0; i < closeButtons.length; i++) {
     let closeButton: Element = closeButtons[i]
     closeButton.addEventListener("click", () => {
@@ -47,7 +46,7 @@ function newElement():void {
   const inputValue = input.value;
   const textNode: Text = document.createTextNode(inputValue);
   li.appendChild(textNode);
-  
+
   if (inputValue === '') {
     alert("You must write something!");
   } else {
