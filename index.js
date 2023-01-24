@@ -1,5 +1,3 @@
-"use strict";
-// export ();
 // Create a "close" button and append it to each list item
 const myNodelist = document.getElementsByTagName("LI");
 let i;
@@ -13,7 +11,7 @@ for (i = 0; i < myNodelist.length; i++) {
 // Click on a close button to hide the current list item
 let closeButtons = document.getElementsByClassName("close");
 i;
-for (i = 0; i < close.length; i++) {
+for (i = 0; i < closeButtons.length; i++) {
     let closeButton = closeButtons[i];
     closeButton.addEventListener("click", () => {
         const li = closeButton.parentElement;
@@ -28,7 +26,7 @@ if (list) {
     list.addEventListener('click', function (ev) {
         let target = ev.target;
         if (target) {
-            if (target && target.tagName === 'LI') {
+            if (target.tagName === 'LI') {
                 target.classList.toggle('checked');
             }
         }
@@ -69,3 +67,4 @@ const addBtn = document.getElementById("addBtn");
 addBtn === null || addBtn === void 0 ? void 0 : addBtn.addEventListener("click", () => {
     newElement();
 });
+export {};

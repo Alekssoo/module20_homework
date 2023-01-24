@@ -1,4 +1,4 @@
-// export ();
+export {};
 
 // Create a "close" button and append it to each list item
 const myNodelist: HTMLCollectionOf<Element> = document.getElementsByTagName("LI");
@@ -14,7 +14,7 @@ for (i = 0; i < myNodelist.length; i++) {
 // Click on a close button to hide the current list item
 let closeButtons: HTMLCollectionOf<Element> = document.getElementsByClassName("close");
 i;
-for (i = 0; i < close.length; i++) {
+for (i = 0; i < closeButtons.length; i++) {
     let closeButton: Element = closeButtons[i]
     closeButton.addEventListener("click", () => {
         const li = closeButton.parentElement;
@@ -30,7 +30,7 @@ if (list) {
     list.addEventListener('click', function (ev) {
         let target: HTMLElement = <HTMLElement>ev.target;
         if (target) {
-            if (target && target.tagName === 'LI') {
+            if (target.tagName === 'LI') {
                 target.classList.toggle('checked');
               }
         }
@@ -40,13 +40,14 @@ if (list) {
 
 
 // Create a new list item when clicking on the "Add" button
-function newElement(): void {
+function newElement():void {
   const li: HTMLElement = document.createElement("li");
   const input: HTMLInputElement = <HTMLInputElement>document.getElementById("myInput")
   if (!input) return;
   const inputValue = input.value;
   const textNode: Text = document.createTextNode(inputValue);
   li.appendChild(textNode);
+  
   if (inputValue === '') {
     alert("You must write something!");
   } else {
