@@ -40,7 +40,7 @@ if (list) {
 
 // Create a new list item when clicking on the "Add" button
 function newElement():void {
-  const li: HTMLElement = document.createElement("li");
+  const li: HTMLLIElement = document.createElement("li");
   const input: HTMLInputElement = <HTMLInputElement>document.getElementById("myInput")
   if (!input) return;
   const inputValue = input.value;
@@ -64,12 +64,12 @@ function newElement():void {
   span.appendChild(txt);
   li.appendChild(span);
 
-    span.addEventListener("click", () => {
-        const li = span.parentElement;
-        if (!!li) {
-            li.style.display = "none";
-        }
-    })
+  span.addEventListener("click", () => {
+      const li = span.parentElement;
+      if (!!li) {
+          li.style.display = "none";
+      }
+  })
 }
 
 const addBtn: HTMLElement | null = document.getElementById("addBtn") 
